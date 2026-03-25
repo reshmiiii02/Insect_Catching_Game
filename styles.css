@@ -1,0 +1,140 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #1e3a8a, #87ceeb);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffeb3b; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 25px;
+    padding: 22px 45px; 
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #3f51b5, #673ab7);  
+    border: none;
+    border-radius: 40px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #3949ab, #5e35b1);
+}
+
+.insect-images img {
+    width: 120px; 
+    height: 120px;  
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    border-radius: 50%; 
+}
+
+.insect-images img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+}
+
+.insect-container {
+    position: relative;
+    width: 95%;
+    height: 500px; 
+    background-color: #87ceeb; 
+    border: 6px solid #1e3a8a; 
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.insect {
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    cursor: pointer;
+    border-radius: 50%; 
+    transition: transform 0.2s, opacity 0.2s;
+    animation: insect-fly 5s infinite ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.insect:hover {
+    transform: scale(1.3);
+}
+
+
+@keyframes insect-fly {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -15px);
+    }
+    50% {
+        transform: translate(-10px, 20px);
+    }
+    75% {
+        transform: translate(15px, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; 
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.game-over {
+    margin-top: 30px;
+    color: #c62828;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hidden .score {
+    pointer-events: none; 
+}

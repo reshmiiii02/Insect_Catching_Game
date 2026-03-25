@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Insect Catcher</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Insect Catcher</h1>
+
+        <div id="startScreen" class="screen">
+            <button class="start-btn" onclick="showLevels()">Start Game</button>
+        </div>
+
+        <div id="difficultySelection" class="screen hidden">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-buttons">
+                <button onclick="setDifficulty('low')">Low</button>
+                <button onclick="setDifficulty('medium')">Medium</button>
+                <button onclick="setDifficulty('high')">High</button>
+            </div>
+        </div>
+
+        <div id="insectSelection" class="screen hidden">
+            <h2>Select Your Insect</h2>
+            <div class="insect-images">
+                <img src="butterfly.jpg" alt="Butterfly" onclick="selectInsect('butterfly')">
+                <img src="bee.jpg" alt="Bee" onclick="selectInsect('bee')">
+                <img src="insect.jpg" alt="Ladybug" onclick="selectInsect('ladybug')">
+            </div>
+        </div>
+
+        <div id="gameScreen" class="screen hidden">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div id="selectedInsectContainer" class="selected-insect">
+                <p>You're catching:</p>
+                <img id="selectedInsectImage" src="" alt="Selected Insect">
+            </div>
+            <div id="gameOver" class="game-over hidden">
+                <p>Game Over! Too many insects!</p>
+                <button onclick="restartGame()">Restart</button>
+            </div>
+            <div id="insects" class="insect-container"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
